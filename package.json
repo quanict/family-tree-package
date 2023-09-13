@@ -1,0 +1,29 @@
+{
+  "name": "ict.family-tree",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "start": "webpack --mode development",
+    "css": "gulp sass",
+    "scss": "gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quanict/ict.photos.nhat-minh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+   
+  }
+}

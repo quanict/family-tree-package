@@ -1,0 +1,35 @@
+{
+    "name": "ict/family-tree",
+    "description": "Family tree data",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0",
+        "ict/core": "*",
+        "ict/webpage": "*",
+        "ict.theme/sneat":"*"
+    },
+
+    "authors": [
+        {
+            "name": "QuanICT",
+            "email": "hongquan2712@gmail.com"
+        }
+    ],
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IctFamilyTree\\ServiceProvider"
+            ]
+
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "IctFamilyTree\\": "src/"
+        }
+    }
+}
