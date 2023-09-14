@@ -95,35 +95,26 @@ export default class Links {
 	static createD3(linksToAdd:any, addEventsCallback:any){
 		const {nodePortSize} = Chart;
 
-		var newLinks = linksToAdd.append('g').attr({
-			'id': function(d:any){ return 'link-' + d.id; },
-			'class': 'link'
-		});
+		var newLinks = linksToAdd.append('g')
+		.attr('id', function(d:any){ return 'link-' + d.id; })
+		.attr('class', 'link');
 		
 		newLinks.append('path')
-			.attr({
-				'class': 'visible-link',
-				'stroke-width': '2px'
-			});
+		.attr('class', 'visible-link')
+			.attr('stroke-width', '2px');
 		
 		newLinks.append('path')
-			.attr({
-				'class': 'hidden-link',
-				'stroke-width': nodePortSize + 'px'
-			});
+		.attr('class', 'hidden-link')
+			.attr('stroke-width', nodePortSize + 'px');
 
 		newLinks.append('circle')
 			.style('stroke-width',  2)
-			.attr({
-				'class': 'children-port', 
-				r: nodePortSize
-			});
+			.attr('class', 'children-port')
+			.attr("r", nodePortSize);
 
 		newLinks.append('circle')
-			.attr({
-				'class': 'hidden-port children-port', 
-				r: nodePortSize * 1.5
-			});
+		.attr('class', 'hidden-port children-port')
+			.attr("r", nodePortSize * 1.5);
 
 
         if (addEventsCallback)
@@ -133,9 +124,11 @@ export default class Links {
 	}
 
 	static updateD3(links:any){
-		links
-			.classed('selected', function (d:any) { return d.selected; })
+		console.log(`=== Links.updateD3`, {links})
+		links.classed('selected', function (d:any) { return d.selected; });
+		links.enter()
 			.each(function(d:any){
+				console.log(`=== Links.updateD3 loop item`, {d})
 				Links.render(d3.select(d), d);
 			});
 	}
@@ -143,14 +136,18 @@ export default class Links {
 	static render(d3selection:any, link:any, xs:any=0, ys:any=0, scale=1){
 		const {xScale, yScale, currentScale, nodeWidth, nodeHeight, nodePortSize} = Chart;
 
-		if (!d3selection || !link || d3selection.empty())
+		if (!d3selection || !link || d3selection.empty()){
+			console.warn(`===== link.render selection is empty`, {d3selection})
 			return;
+		}
+			
 		xs = xs || xScale;
 		ys = ys || yScale;
 		scale = scale || currentScale;
 
-		var p1 = Nodes.getNodeById(link.fromNode) || link.extraCoords,
-			p2 = Nodes.getNodeById(link.toNode) || link.extraCoords;
+		var p1 = Nodes.getNodeById(link.fromNode) || link.extraCoords;
+		const p2 = Nodes.getNodeById(link.toNode) || link.extraCoords;
+		console.warn(`===== link.render selection is empty`, {p1, p2, link})
 		var points = {
 			x1: p1.x + nodeWidth,
 			y1: p1.y + (nodeHeight) * 0.5, 
