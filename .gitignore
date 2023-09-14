@@ -10,3 +10,9 @@ bootstrap/compiled.php
 /.vagrant
 .phpunit.result.cache
 .idea
+
+package-old.json
+package-lock.json
+package-mix.json
+mix.ts.js
+mix-manifest.json

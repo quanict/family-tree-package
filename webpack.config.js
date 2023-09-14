@@ -67,7 +67,7 @@ module.exports = {
            }
     },
     output: {
-        filename: 'typescript.js',
+        filename: 'script.js',
         path: path.resolve(__dirname, 'resources/public/js'),
     },
 };

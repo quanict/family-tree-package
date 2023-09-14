@@ -2,140 +2,25 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Family Tree</title>
-    <script src="js/lib/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/lib/jquery.validate.js"></script>
+    <title>Nguyen Van</title>
+{{--    <script src="js/lib/jquery.min.js" type="text/javascript"></script>--}}
+{{--    <script type="text/javascript" src="js/lib/jquery.validate.js"></script>--}}
+{{--    <script charset="utf-8" src="js/lib/d3.v3.min.js" type="text/javascript"></script>--}}
 
-    <script charset="utf-8" src="js/lib/d3.v3.min.js" type="text/javascript"></script>
-
-    <script src="js/lib/bootstrap.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
-
+{{--    <script src="js/lib/bootstrap.min.js" type="text/javascript"></script>--}}
+{{--    <link rel="stylesheet" href="styles/bootstrap.min.css">--}}
+{{--    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">--}}
     <!--<script src="js/lib/tether.min.js" type="text/javascript"></script>-->
 
-    <link rel="stylesheet" href="styles/main.css">
-    <style id="less:concepts-less-css-style" media="screen" type="text/css">
-        #viewport {
-            height: 100%;
-            padding-right: 0px;
-            padding-left: 0px;
-            background-color: #555;
-        }
-        svg {
-            fill: #555;
-        }
-        .zoom-pan-area {
-            fill: transparent;
-        }
-        #clone-svg-viewport .zoom-pan-area {
-            fill: #555;
-        }
-        .node .node-base {
-            fill-opacity: 0.9;
-            fill: #bdbdbd;
-            stroke: #fff;
-        }
-        .bg-node-image {
-            stroke: #080808;
-            fill: #555;
-        }
-        .neutral-color {
-            stop-color: #bdbdbd;
-            stop-opacity: 0.9;
-        }
-        .male-color {
-            stop-color: #a3b9cf;
-            stop-opacity: 0.9;
-        }
-        .female-color {
-            stop-color: #cfa3b3;
-            stop-opacity: 0.9;
-        }
-        .node.male .node-base {
-            fill: url(#male-gradient);
-        }
-        .node.female .node-base {
-            fill: url(#female-gradient);
-        }
-        .parent-port,
-        polygon.partner-port,
-        .children-port {
-            fill: #555;
-            stroke: #fff;
-        }
-        .hidden-port{
-            fill: transparent;
-            stroke: none;
-        }
-        text {
-            text-decoration: none;
-            text-anchor: middle;
-            font-size: 12px;
-            font-weight: 600;
-            fill: #333333;
-            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        }
-        text.name,
-        text.surname {
-            font-size: 20px;
-        }
-        .description text {
-            text-decoration: none;
-            text-anchor: middle;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        .visible-link {
-            fill: none;
-            stroke: #fff;
-        }
-        .hidden-link {
-            fill: none;
-            stroke: transparent;
-            stroke-width: 8px;
-        }
-        .group .group-area {
-            fill: none;
-            stroke-width: 2px;
-        }
-        .group .pointer {
-            stroke-width: 2px;
-        }
-        .group rect.textarea{
-            fill: transparent;
-            fill-opacity: 0.8;
-            stroke: none;
-            stroke-width: 3px;
-        }
-        .group .textarea text{
-            font-family: Verdana, sans-serif;
-            text-anchor: start;
-            color: #333333;
-        }
-        .selected .node-base,
-        .selected circle:not(.hidden-port),
-        .selected polygon.partner-port,
-        .selected .visible-link,
-        .selected .group-textarea .background{
-            stroke: #4cb3f4;
-        }
-        .open-context-menu rect{
-            stroke-width: 0px;
-            fill: transparent;
-        }
-        .open-context-menu circle{
-            stroke-width: 0px;
-            fill: #333;
-        }
-    </style>
+{{--    <link rel="stylesheet" href="styles/main.css">--}}
+    <link rel="stylesheet" href="/family/css/styles.css">
 
-    <script src="js/familyTreeUtil.js" type="text/javascript"></script>
-    <script src="js/dictionary.js" type="text/javascript"></script>
-    <script src="js/actionHistory.js" type="text/javascript"></script>
-    <script src="js/tooltipManager.js" type="text/javascript"></script>
-    <script src="js/contextMenuManager.js" type="text/javascript"></script>
-    <script src="js/familyTree.js" type="text/javascript"></script>
+{{--    <script src="js/familyTreeUtil.js" type="text/javascript"></script>--}}
+{{--    <script src="js/dictionary.js" type="text/javascript"></script>--}}
+{{--    <script src="js/actionHistory.js" type="text/javascript"></script>--}}
+{{--    <script src="js/tooltipManager.js" type="text/javascript"></script>--}}
+{{--    <script src="js/contextMenuManager.js" type="text/javascript"></script>--}}
+{{--    <script src="js/familyTree.js" type="text/javascript"></script>--}}
 </head>
 <body>
 <nav id="main-family-tree-navbar" class = "navbar navbar-default navbar-inverse" role = "navigation">
@@ -242,7 +127,7 @@
         </ul>
     </div>
 </nav>
-<nav id="selection-in-touch-device" class = "hide navbar navbar-inverse">
+<nav id="selection-in-touch-device" class = "hide d-none navbar navbar-inverse">
     <ul class = "nav navbar-nav">
         <li id="exit-from-selection-mode">
             <a href = "#">
@@ -484,11 +369,11 @@
                 <div class="modal-body">
                     <form class="form-horizontal" role="form" data-toggle="validator">
                         <div class="form-group has-feedback" id="field-file-name">
-                            <label  class="col-sm-4 control-label" for="input-file-name">Choose file:</label>
+                            <label  class="col-sm-4 control-label" for="input-file">Choose file:</label>
                             <div class="col-sm-8" style="position:relative;">
                                 <a class="btn btn-primary" onclick="var input = $(this).find('#input-file'); if (event.target != input[0]) input.trigger('click');">
                                     <i class="glyphicon glyphicon-folder-open" onclick="var input = $('#input-file'); if (event.target != input[0]) input.trigger('click');"></i>
-                                    <input id="input-file" type="file" accept=".json" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="input-file-name" size="40"  >
+                                    <input id="input-file" type="file" accept=".json" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="input-file-name" size="40"  />
                                 </a>
                                 &nbsp;
                                 <input class="file-info form-control" type="text" id="upload-file-info" readonly>
@@ -530,6 +415,6 @@
             </table>
         </div>
     </div>
-    <script id="main-script" src="js/main.js" type="text/javascript"></script>
+    <script src="/family/js/script.js" type="text/javascript"></script>
 </body>
 </html>
