@@ -91,34 +91,9 @@ class FamilyObject {
 
     init() {
         this.nodes = new Nodes();
-        // const dom = document.getElementById('viewport');
-        // viewport = d3.select(dom);
-        // const w = document.body.clientWidth;
-        // const h = document.body.clientHeight;
         Chart.init();
-        
     }
 
-
-    load1(data: any) {
-        // const svg = d3
-        //     .select("body")
-        //     .append("svg")
-        //     .attr("width", 500)
-        //     .attr("height", 500);
-
-        svg
-            .append("text")
-            .attr("x", 100)
-            .attr("y", 100)
-            .text("Hello d3js");
-
-        svg
-            .append("circle")
-            .attr("r", 20)
-            .attr("cx", 20)
-            .attr("cy", 20);
-    }
 
     load(data: any) {
         const tree = (data && data.tree && data.tree.length) ? data.tree : [];
@@ -163,15 +138,13 @@ class FamilyObject {
         this.drawGroups();
         //this.drawNodes();
         Nodes.draw();
-        this.drawLinks();
+        //this.drawLinks();
+        Links.draw();
     }
 
 
 
-    drawLinks() {
-        //this.drawRelLinks();
-        //this.drawChildLinks();
-    }
+   
 
     _setVisibleText(label: any, id: any, className: any) { // one row and tagName text
         let visibleLabel = label;

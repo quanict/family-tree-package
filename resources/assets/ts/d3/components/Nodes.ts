@@ -16,6 +16,10 @@ export default class Nodes {
 
     }
 
+    static getNodeById(id:string, dataset:any=[]){
+        return getDataById(id, dataset || Nodes.items);
+    }
+
     static load(dataset: any = null) {
         Nodes.items = dataset || [];
         Nodes.items.forEach((node: any) => {

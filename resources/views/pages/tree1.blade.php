@@ -415,6 +415,6 @@
             </table>
         </div>
     </div>
-    <script src="/family/js/script.js" type="text/javascript"></script>
+    <script src="/family/js/script.js?{{time()}}" type="text/javascript"></script>
 </body>
 </html>
