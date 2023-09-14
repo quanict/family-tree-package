@@ -6,6 +6,7 @@ import { Selection, SelectionFn, select } from "d3-selection";
 import * as d3 from "d3";
 
 /**
+ * https://github.com/d3/d3-interpolate
  * https://observablehq.com/@d3/d3-line
  */
 export default class Links {
