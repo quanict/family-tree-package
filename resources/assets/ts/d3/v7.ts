@@ -466,8 +466,8 @@ class FamilyObject {
         if (!textareaDom.lastChild) {
             d3textarea.append('text').attr('text-rendering', 'geometricPrecision').attr('y', textSize).text('...');
         } else {
-            d3textarea.selectAll('text').each(function () {
-                const tDom: any = this as HTMLElement;
+            d3textarea.selectAll('text').each(function (tDom:any) {
+                // const tDom: any = this;
                 var t = tDom.innerHTML;
                 while (tDom.getBBox().width > areaW && t.length) {
                     t = t.substr(0, t.length - 1);

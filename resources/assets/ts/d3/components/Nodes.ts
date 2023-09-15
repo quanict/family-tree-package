@@ -6,9 +6,10 @@ import { getTextRows } from "../util/text";
 import $ from "jquery";
 
 import * as d3 from "d3";
-import { Selection, SelectionFn, select } from "d3-selection";
 
-
+/**
+ * https://d3-wiki.readthedocs.io/zh_CN/master/Selections/#control
+ */
 export default class Nodes {
     static items: any
 
@@ -16,12 +17,37 @@ export default class Nodes {
 
     }
 
-    static getNodeById(id:string, dataset:any=[]){
+    static getNodeById(id:string, dataset:any=false){
+        let items: any = dataset || Nodes.items;
+        items = items.filter((item:any)=>{ return item.id == id});
+        if( items.length === 1){
+            return items[0];
+        }
         return getDataById(id, dataset || Nodes.items);
     }
 
+    static getEndPoint(d:any){
+        const {nodeWidth} = Chart;
+		let x:any, y:any;
+		if (d.childId){
+			var child = Nodes.getNodeById(d.childId);
+			if (child){
+				x = child.x + nodeWidth * 0.5, 
+				y = child.y;
+			} 
+		} else {
+			x = d.extraCoords.x;
+			y = d.extraCoords.y; 
+		}		
+		return { 
+			x: x, 
+			y: y
+		};
+	};
+
     static load(dataset: any = null) {
         Nodes.items = dataset || [];
+
         Nodes.items.forEach((node: any) => {
             node.isNode = true;
             node.lastX = node.x;
@@ -41,8 +67,7 @@ export default class Nodes {
             };
         });
 
-
-        return this.items;
+        return Nodes.items;
     }
 
     /**
@@ -59,7 +84,7 @@ export default class Nodes {
         nodes.exit().remove();
 
         Nodes.createD3(nodes.enter(), Nodes.addEvents);
-        Nodes.updateD3(nodes.enter());
+        Nodes.updateD3(nodes);
     }
 
 
@@ -167,12 +192,10 @@ export default class Nodes {
     }
 
     static updateD3(nodes: any, onlyBasicInfo: any = false) {
-        //console.log(`================= updateD3 1`, {nodes, onlyBasicInfo});
         if (!nodes || nodes.empty()) {
             //console.warn(`====== nodes.updateD3 [nodes is emtpy]`, { nodes })
             return;
         }
-
         
         if (onlyBasicInfo === true) { // includes image, texts and sex
             Nodes.updateD3Texts(nodes);
@@ -182,17 +205,16 @@ export default class Nodes {
         }
 
         //extraParams is an array of relationship links
-        // nodes.classed('selected', function (d: any) {
-        //     return d.selected;
-        // });
+        nodes.classed('selected', function (d: any) {
+            return d.selected;
+        });
 
         const { currentScale, xScale, yScale } = Chart;
 
         const xS = xScale(1) - xScale(0);
         const yS = yScale(1) - yScale(0);
-
         nodes.each((d: any) => {
-            const d3selection = select(`#node-${d.id}`);
+            const d3selection = d3.select(`#node-${d.id}`);
             const tx = xScale(d.x);
             const ty = yScale(d.y);
             d3selection.attr('transform', 'translate(' + tx + ', ' + ty + ') scale(' + xS + ',' + yS + ')');
@@ -208,11 +230,11 @@ export default class Nodes {
         }
 
         nodes.each((d: any) => {
-            const selection: any = select(d);
+            const selection: any = d3.select(d);
             //selection.select('.name').text(d.visible.name);
-            select(`#node-${d.id} .name`).text(d.visible.name)
+            d3.select(`#node-${d.id} .name`).text(d.visible.name)
             //selection.select('.surname').text(d.visible.surname);
-            select(`#node-${d.id} .surname`).text(d.visible.surname)
+            d3.select(`#node-${d.id} .surname`).text(d.visible.surname)
             this.setD3Description(selection);
         });
     }

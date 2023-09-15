@@ -26,7 +26,7 @@ export default class Chart {
     static init(){
         const w = document.body.clientWidth;
         const h = document.body.clientHeight;
-        const dom = document.getElementById('viewport');
+        const dom : any = document.getElementById('viewport');
         const viewport = d3.select(dom);
 
         this.svg = viewport.append('svg:svg')
@@ -54,7 +54,7 @@ export default class Chart {
         //.call(zoom)
         .on('dblclick.zoom', null);
 
-        this.xScale = d3.scaleLinear().domain([0, w]).range([0, w]);
-		this.yScale = d3.scaleLinear().domain([0, h]).range([0, h]);
+        this.xScale = d3.scale.linear().domain([0, w]).range([0, w]);
+		this.yScale = d3.scale.linear().domain([0, h]).range([0, h]);
     }
 }
