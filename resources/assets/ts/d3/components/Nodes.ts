@@ -261,7 +261,7 @@ export default class Nodes {
         });
     }
 
-    static setD3Description(nodeD3: any, jQueryElm: any = null, nodeData: any = null) {
+    static setD3Description(nodeD3: any) {
         if (!nodeD3 || nodeD3.empty()){
             return;
         }
@@ -273,7 +273,7 @@ export default class Nodes {
         const { nodeWidth, nodeHeight, nodePadding, imageSize } = Chart;
         node.hasPartialDescr = false;
 
-        const text = node.description || nodeData.description;
+        const text = node.description;
         
         let descrDom: any = $(`#node-${node.id} .description`).get(0);
 

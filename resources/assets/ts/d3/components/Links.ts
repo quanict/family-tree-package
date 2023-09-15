@@ -150,7 +150,7 @@ export default class Links {
 
 	static createD3(linksToAdd: any, addEventsCallback: any) {
 		const { nodePortSize } = Chart;
-
+		console.log(`==== LinkscreateD3`, {linksToAdd})
 		var newLinks = linksToAdd.append('g')
 			.attr('id', function (d: any) { return 'link-' + d.id; })
 			.attr('class', 'link');
@@ -202,10 +202,13 @@ export default class Links {
 		ys = ys || yScale;
 		scale = scale || currentScale;
 
-		var p1 = Nodes.getNodeById(link.fromNode) || link.extraCoords;
+		const p1 = Nodes.getNodeById(link.fromNode) || link.extraCoords;
 		const p2 = Nodes.getNodeById(link.toNode) || link.extraCoords;
-
-		var points = {
+		if( !p1 || !p2) {
+			console.warn(`==== can not create links`, {p1, p2, link})
+			return;
+		}
+		const points = {
 			x1: p1.x + nodeWidth,
 			y1: p1.y + (nodeHeight) * 0.5,
 			x2: p2.x,
