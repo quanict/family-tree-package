@@ -9,6 +9,7 @@ import {data} from "../../data/data";
 import Nodes from "./components/Nodes";
 import Chart from "./components/Chart";
 import Links from "./components/Links";
+import { getNodesViewport } from "./util/viewport";
 
 
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -35,48 +36,10 @@ let createdNodes = {createdId: 0, allCreated: {}},
     addedNodesToGroup = {addedId: 0, allAdded: {}},
     removedNodesFromGroup = {removedId: 0, allRemoved: {}};
 let dataNodes: any = [];
-let dataRelLinks: any = [];
-let dataChildLinks: any = [];
 let dataGroups: any = [];
-let viewport;
-let groupOver = null;
-let isResizingGroup = null;
 
 function getNodeById(id: any, dataset: any = null) {
     return getDataById(id, dataset || dataNodes);
-}
-
-function _getNodesViewport(nodes: any) {
-    nodes = nodes || [];
-    let canvasInfo: any = {};
-    if (!nodes.length) {
-        canvasInfo = null;
-    } else {
-        canvasInfo.xRange = [
-            d3.min(nodes, function (d: any) {
-                return d.x;
-            }),
-            d3.max(nodes, function (d: any) {
-                return d.x + nodeWidth;
-            })
-        ];
-        canvasInfo.yRange = [
-            d3.min(nodes, function (d: any) {
-                return d.y;
-            }),
-            d3.max(nodes, function (d: any) {
-                return d.y + nodeHeight;
-            })
-        ];
-
-        canvasInfo.w = canvasInfo.xRange[1] - canvasInfo.xRange[0];
-        canvasInfo.h = canvasInfo.yRange[1] - canvasInfo.yRange[0];
-
-        canvasInfo.padding = Math.max(canvasInfo.w, canvasInfo.h) * 0.5;
-        canvasInfo.w += 2 * canvasInfo.padding;
-        canvasInfo.h += 2 * canvasInfo.padding;
-    }
-    return canvasInfo;
 }
 
 function _addEventsToGroups(groups: any) {
@@ -102,7 +65,7 @@ class FamilyObject {
         this.loadTree(tree);
         //this.loadGroups(groups);
         this.draw();
-        this.centerAll();
+        Chart.centerAll();
     }
 
 
@@ -250,7 +213,7 @@ class FamilyObject {
         });
 
         var x0, x1, y0, y1;
-        var canvasInfo = _getNodesViewport(nodes);
+        var canvasInfo = getNodesViewport(nodes);
         if (!canvasInfo) {
             x0 = xs(g.x);
             x1 = xs(g.x);
@@ -477,15 +440,6 @@ class FamilyObject {
         }
     }
 
-    centerTo = function (nodes: any, groups: any, transitionDuration: any) {
-        if (!svg || svg.empty())
-            return;
-    }
-
-    centerAll() {
-        //CtxMenuManager.hide();
-        this.centerTo(dataNodes, dataGroups, 500);
-    };
 
     loadNodes(dataset: any = null) {
         dataNodes = dataset || [];
@@ -519,4 +473,6 @@ $(document).ready(function () {
     const family = new FamilyObject();
     family.init();
     family.load(data);
+    document.body.onresize = Chart.onResize;
+
 });

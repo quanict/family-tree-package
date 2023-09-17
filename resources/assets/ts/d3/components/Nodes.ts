@@ -52,6 +52,7 @@ export default class Nodes {
             node.isNode = true;
             node.lastX = node.x;
             node.lastY = node.y;
+            node.sex = node.sex||"M";
             node.visible = {
                 name: Text.setVisibleText(node.name, node.id, 'name'),
                 surname: Text.setVisibleText(node.surname, node.id, 'surname')
@@ -231,10 +232,17 @@ export default class Nodes {
 
         nodes.each((d: any) => {
             const selection: any = d3.select(d);
-            //selection.select('.name').text(d.visible.name);
+            
             d3.select(`#node-${d.id} .name`).text(d.visible.name)
-            //selection.select('.surname').text(d.visible.surname);
-            d3.select(`#node-${d.id} .surname`).text(d.visible.surname)
+            
+            let surnameText : string = '';
+            if( d.visible.surname ){
+                surnameText = d.visible.surname;
+            }
+            if( d.death ){
+                surnameText += ` (${d.death})`;
+            }
+            d3.select(`#node-${d.id} .surname`).text(surnameText.trim())
             this.setD3Description(selection);
         });
     }

@@ -45,8 +45,6 @@ export function drawLine(points: any, direction: any, xs: any, ys: any) {
         [coords.controlend.x, coords.controlend.y],
         [coords.end.x, coords.end.y]
     ]);
-
-
 }
 
 export function getLinkingPoints(coords: any, direction: any, xScale: any, yScale: any) {
