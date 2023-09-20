@@ -340,28 +340,28 @@ export const data = {
                 ]
             },
             {
-                "x": 2770,
+                "x": 2900,
                 "y": 2050,
                 "id": "77ad6908-9683-49e4-3820-0aa7b539520c",
                 "name": "Nguyễn Văn Đỏ",
                 "death":"",
             },
             {
-                "x": 3020,
+                "x": 3150,
                 "y": 2050,
                 "id": "c2677975-a554-909a-241f-cbb3f92f88f7",
                 "name": "Nguyễn Tiến Dũng",
                 "alive":true,
             },
             {
-                "x": 3270,
+                "x": 3400,
                 "y": 2050,
                 "id": "c10ee252-9e7f-81f5-0775-8f4ec9a0b848",
                 "name": "Nguyễn Xuân Toàn",
                 "death":"",
             },
             {
-                "x": 3520,
+                "x": 3650,
                 "y": 2050,
                 "id": "6d389160-1bc8-b1e1-f474-68b57f995b4a",
                 "name": "Nguyễn Thị Oanh",

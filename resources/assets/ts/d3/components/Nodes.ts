@@ -194,7 +194,6 @@ export default class Nodes {
 
     static updateD3(nodes: any, onlyBasicInfo: any = false) {
         if (!nodes || nodes.empty()) {
-            //console.warn(`====== nodes.updateD3 [nodes is emtpy]`, { nodes })
             return;
         }
         

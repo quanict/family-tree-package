@@ -12,9 +12,6 @@ import Link from "./Link";
  * https://observablehq.com/@d3/d3-line
  */
 export default class Links {
-	static dataRelLinks: any = []
-	// static dataChildLinks: any = []
-
 
 	static getRelLinkById(id: string, dataset: any = false) {
 		return getDataById(id, dataset || Link.items);
@@ -36,19 +33,14 @@ export default class Links {
 							fromNode: (direction == 'to') ? id : partnerId,
 							toNode: (direction == 'to') ? partnerId : id
 						};
+
 						Link.add(relId, (direction == 'to') ? id : partnerId, (direction == 'to') ? partnerId : id);
-						//Links.dataRelLinks.push(relLink);
 
 						if (Array.isArray(rel.children) && rel.children.length) {
 							relLink.hasChildren = true;
 
 							rel.children.forEach(function (childId: any) {
 								LinkChild.add(guid(), childId, relId);
-								// Links.dataChildLinks.push({
-								// 	id: guid(),
-								// 	childId: childId,
-								// 	relId: relId
-								// });
 							});
 						}
 					}
