@@ -17,33 +17,33 @@ export default class Nodes {
 
     }
 
-    static getNodeById(id:string, dataset:any=false){
+    static getNodeById(id: string, dataset: any = false) {
         let items: any = dataset || Nodes.items;
-        items = items.filter((item:any)=>{ return item.id == id});
-        if( items.length === 1){
+        items = items.filter((item: any) => { return item.id == id });
+        if (items.length === 1) {
             return items[0];
         }
         return getDataById(id, dataset || Nodes.items);
     }
 
-    static getEndPoint(d:any){
-        const {nodeWidth} = Chart;
-		let x:any, y:any;
-		if (d.childId){
-			var child = Nodes.getNodeById(d.childId);
-			if (child){
-				x = child.x + nodeWidth * 0.5, 
-				y = child.y;
-			} 
-		} else {
-			x = d.extraCoords.x;
-			y = d.extraCoords.y; 
-		}		
-		return { 
-			x: x, 
-			y: y
-		};
-	};
+    static getEndPoint(d: any) {
+        const { nodeWidth } = Chart;
+        let x: any, y: any;
+        if (d.childId) {
+            var child = Nodes.getNodeById(d.childId);
+            if (child) {
+                x = child.x + nodeWidth * 0.5,
+                    y = child.y;
+            }
+        } else {
+            x = d.extraCoords.x;
+            y = d.extraCoords.y;
+        }
+        return {
+            x: x,
+            y: y
+        };
+    };
 
     static load(dataset: any = null) {
         Nodes.items = dataset || [];
@@ -51,8 +51,10 @@ export default class Nodes {
         Nodes.items.forEach((node: any) => {
             node.isNode = true;
             node.lastX = node.x;
+            node.x = node.x * 10;
+            node.y = node.y || ((node.level + 3) * Chart.LEVEL_LINE_SPACE + 10);
             node.lastY = node.y;
-            node.sex = node.sex||"M";
+            node.sex = node.sex || "M";
             node.visible = {
                 name: Text.setVisibleText(node.name, node.id, 'name'),
                 surname: Text.setVisibleText(node.surname, node.id, 'surname')
@@ -196,7 +198,7 @@ export default class Nodes {
         if (!nodes || nodes.empty()) {
             return;
         }
-        
+
         if (onlyBasicInfo === true) { // includes image, texts and sex
             Nodes.updateD3Texts(nodes);
             this.updateD3Colors(nodes);
@@ -231,14 +233,14 @@ export default class Nodes {
 
         nodes.each((d: any) => {
             const selection: any = d3.select(d);
-            
+
             d3.select(`#node-${d.id} .name`).text(d.visible.name)
-            
-            let surnameText : string = '';
-            if( d.visible.surname ){
+
+            let surnameText: string = '';
+            if (d.visible.surname) {
                 surnameText = d.visible.surname;
             }
-            if( d.death ){
+            if (d.death) {
                 surnameText += ` (${d.death})`;
             }
             d3.select(`#node-${d.id} .surname`).text(surnameText.trim())
@@ -247,11 +249,11 @@ export default class Nodes {
     }
 
     static updateD3Colors(nodes: any) {
-        if (!nodes || nodes.empty()){
+        if (!nodes || nodes.empty()) {
             console.warn(`====== updateD3Colors is empty`)
             return;
         }
-            
+
         nodes.classed('male', function (d: any) {
             return d.sex.toUpperCase() == 'M';
         });
@@ -269,10 +271,10 @@ export default class Nodes {
     }
 
     static setD3Description(nodeD3: any) {
-        if (!nodeD3 || nodeD3.empty()){
+        if (!nodeD3 || nodeD3.empty()) {
             return;
         }
-            
+
         const node = nodeD3.node();
         if (!node)
             return;
@@ -281,7 +283,7 @@ export default class Nodes {
         node.hasPartialDescr = false;
 
         const text = node.description;
-        
+
         let descrDom: any = $(`#node-${node.id} .description`).get(0);
 
         while (descrDom.lastChild)

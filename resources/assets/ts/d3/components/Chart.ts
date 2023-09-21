@@ -8,9 +8,10 @@ import LinkChild from "./LinkChild";
 import Link from "./Link";
 
 export default class Chart {
-    static nodeWidth = 200; //200,
-    static nodeHeight = 120; //90,
-    static nodePadding = 10;
+    static LEVEL_LINE_SPACE = 300
+    static nodeWidth = 200 //200,
+    static nodeHeight = 120 //90,
+    static nodePadding = 10
     static nodePortSize = 8;
 
     static imageSize = 0; //nodeHeight - 2 * nodePadding
