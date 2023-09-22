@@ -53,6 +53,118 @@ export const data = {
                 "level": 0,
                 "name": "Nguyễn Năm Lập",
                 "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["namlap1", "namlap2"]
+                    }
+                ]
+            },
+            {
+                "x": 275,
+                "id": "namlap1",
+                "level": 1,
+                "name": "Nguyễn Năm Viễn",
+                "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["33ec46a7-3711-4192-4e4d-36f8c6284ebb"]
+                    }
+                ]
+            },
+            {
+                "x": 275,
+                "id": "33ec46a7-3711-4192-4e4d-36f8c6284ebb",
+                "level": 2,
+                "name": "Nguyễn Văn Liêu",
+                "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["42ec46a7-3711-4192-4e4d-36f8c6284ebb"]
+                    }
+                ]
+            },
+            {
+                "x": 275,
+                "id": "42ec46a7-3711-4192-4e4d-36f8c6284ebb",
+                "level": 3,
+                "name": "Nguyễn Văn Đạt",
+                "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["32ec46a7-3711-4192-4e4d-36f8c6284ebb"]
+                    }
+                ]
+            },
+            {
+                "x": 275,
+                "id": "32ec46a7-3711-4192-4e4d-36f8c6284ebb",
+                "level": 4,
+                "name": "Nguyễn Văn Thái",
+                "death": "",
+            },
+            {
+                "x": 300,
+                "id": "namlap2",
+                "level": 1,
+                "name": "Nguyễn Văn Xuân",
+                "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["3b474b38-7ad0-2371-2cf2-7e18df8d8abd", "3b474b38-7ad0-2371-2cf2-7e18df8d8abc"]
+                    }
+                ]
+            },
+            {
+                "x": 300,
+                "id": "3b474b38-7ad0-2371-2cf2-7e18df8d8abd",
+                "level": 2,
+                "name": "Nguyễn Văn Tấu",
+                "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["fa50edf3-33cb-daaa-6102-fe99972e012c", "fa50edf3-33cb-daaa-6102-fe99972e012d"]
+                    }
+                ]
+            },
+            {
+                "x": 300,
+                "id": "fa50edf3-33cb-daaa-6102-fe99972e012c",
+                "level": 3,
+                "name": "Nguyễn Văn Sỹ",
+                "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["fa50edf3-33cb-daaa-6102-fe99972e023c"]
+                    }
+                ]
+            },
+            {
+                "x": 300,
+                "id": "fa50edf3-33cb-daaa-6102-fe99972e023c",
+                "level": 4,
+                "name": "Nguyễn Văn Chinh",
+                "death": "",
+            },
+            {
+                "x": 325,
+                "id": "fa50edf3-33cb-daaa-6102-fe99972e012d",
+                "level": 3,
+                "name": "Nguyễn Phụng",
+                "death": "",
+            },
+            {
+                "x": 325,
+                "id": "3b474b38-7ad0-2371-2cf2-7e18df8d8abc",
+                "level": 2,
+                "name": "Nguyễn Nhỡ",
+                "death": "",
             },
             {
                 "x": 325,
@@ -297,7 +409,7 @@ export const data = {
                 ]
             },
             {
-                "x": 1362.5,
+                "x": 1437.5,
                 "id": "300e247c-5b0c-bdb8-ceef-aec5d636ac9b",
                 "level": 2,
                 "name": "Nguyễn Văn Kha",
@@ -305,22 +417,99 @@ export const data = {
                 "relationships": [
                     {
                         "direction": "to",
-                        "children": ["17bf3117-38c5-06d0-7abb-a018f69e11a4", "ea28bcb8-185b-8cff-d8e9-2d446d1cb785"]
+                        "children": [
+                            "17bf3117-38c5-06d0-7abb-a018f69e11a4",
+                            "ea28bcb8-185b-8cff-d8e9-2d446d1cb785",
+                            "17bf3117-38c5-06d0-7abb-a018f69e11a5"
+                        ]
+                    }
+                ]
+            },
+            {
+                "x": 1400,
+                "id": "17bf3117-38c5-06d0-7abb-a018f69e11a4",
+                "level": 3,
+                "name": "Nguyễn Văn Khả",
+                "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": [
+                            "kha1",
+                            "kha2",
+                            "kha3",
+                            "kha4",
+                            "kha5"
+                        ]
                     }
                 ]
             },
             {
                 "x": 1350,
-                "id": "17bf3117-38c5-06d0-7abb-a018f69e11a4",
-                "level": 3,
-                "name": "Nguyễn Văn Khả",
-                "death": "",
+                "id": "kha1",
+                "level": 4,
+                "name": "Nguyễn Văn Sơn",
             },
             {
                 "x": 1375,
+                "id": "kha2",
+                "level": 4,
+                "name": "Nguyễn Văn Thanh",
+            },
+            {
+                "x": 1400,
+                "id": "kha3",
+                "level": 4,
+                "name": "Nguyễn Văn Giang",
+            },
+            {
+                "x": 1425,
+                "id": "kha4",
+                "level": 4,
+                "name": "Nguyễn Văn Tiếp",
+            },
+            {
+                "x": 1450,
+                "id": "kha5",
+                "level": 4,
+                "name": "Nguyễn Văn Tấn",
+            },
+            {
+                "x": 1500,
                 "id": "ea28bcb8-185b-8cff-d8e9-2d446d1cb785",
                 "level": 3,
                 "name": "Nguyễn Văn Kỳ",
+                "death": "",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["ky1", "ky2", "ky3"]
+                    }
+                ]
+            },
+            {
+                "x": 1475,
+                "id": "ky1",
+                "level": 4,
+                "name": "Nguyễn Văn Khang",
+            },
+            {
+                "x": 1500,
+                "id": "ky2",
+                "level": 4,
+                "name": "Nguyễn Văn Khôi",
+            },
+            {
+                "x": 1525,
+                "id": "ky3",
+                "level": 4,
+                "name": "Nguyễn Văn Khiển",
+            },
+            {
+                "x": 1550,
+                "id": "17bf3117-38c5-06d0-7abb-a018f69e11a5",
+                "level": 3,
+                "name": "Nguyễn Văn Hà",
                 "death": "",
             },
 
@@ -411,7 +600,25 @@ export const data = {
                 "id": "d4dbbaab-ca75-b6c9-e375-560db4b5259b",
                 "level": 4,
                 "name": "Nguyễn Văn Lộ",
-                "note": "3 con gai"
+                "note": "3 con gai",
+                "relationships": [
+                    {
+                        "direction": "to",
+                        "children": ["nvl1", "nvl2"]
+                    }
+                ]
+            },
+            {
+                "x": 550,
+                "id": "nvl1",
+                "level": 5,
+                "name": "Nguyễn Văn Khải",
+            },
+            {
+                "x": 575,
+                "id": "nvl2",
+                "level": 5,
+                "name": "Nguyễn Văn Hoàn",
             },
             {
                 "x": 1000,
@@ -684,6 +891,7 @@ export const data = {
                             "ce17e22d-aef5-db58-cf56-6edc4a3ed115",
                             "abfdc0bd-4bb3-b93c-fed0-6f85f92b2de0",
                             "0d79b869-e654-cec5-1b04-c023ab2eeedc",
+                            "0d79b869-e654-cec5-1b04-c023ab2eeedd",
                             "cb97b3ab-1652-02e4-df7d-d4bde749ede6"
                         ]
                     }
@@ -719,6 +927,13 @@ export const data = {
             },
             {
                 "x": 975,
+                "id": "0d79b869-e654-cec5-1b04-c023ab2eeedd",
+                "level": 5,
+                "name": "Nguyễn Văn Quỳnh",
+                "death": "",
+            },
+            {
+                "x": 1000,
                 "id": "cb97b3ab-1652-02e4-df7d-d4bde749ede6",
                 "level": 5,
                 "name": "Nguyễn Văn Toán",
@@ -742,7 +957,7 @@ export const data = {
                 ]
             },
             {
-                "x": 1000,
+                "x": 1025,
                 "id": "nvq1",
                 "level": 5,
                 "name": "Nguyễn Văn Thiệp",
@@ -756,7 +971,7 @@ export const data = {
                 ]
             },
             {
-                "x": 1025,
+                "x": 1050,
                 "id": "nvq11",
                 "level": 5,
                 "name": "",
@@ -779,7 +994,7 @@ export const data = {
                 "alive": true,
             },
             {
-                "x": 1050,
+                "x": 1075,
                 "id": "nvq2",
                 "level": 5,
                 "name": "Nguyễn Văn Hữu",
@@ -793,7 +1008,7 @@ export const data = {
                 ]
             },
             {
-                "x": 1075,
+                "x": 1100,
                 "id": "nvq22",
                 "level": 5,
                 "name": "",
@@ -830,7 +1045,7 @@ export const data = {
                 ]
             },
             {
-                "x": 1100,
+                "x": 1125,
                 "id": "nvte1",
                 "level": 5,
                 "name": "",
@@ -838,7 +1053,7 @@ export const data = {
                 "sex": "f"
             },
             {
-                "x": 1125,
+                "x": 1150,
                 "id": "nvte2",
                 "level": 5,
                 "name": "",
@@ -846,7 +1061,7 @@ export const data = {
                 "sex": "f"
             },
             {
-                "x": 1150,
+                "x": 1175,
                 "id": "nvte3",
                 "level": 5,
                 "name": "",
@@ -868,7 +1083,7 @@ export const data = {
                 ]
             },
             {
-                "x": 1175,
+                "x": 1200,
                 "id": "nvt1",
                 "level": 5,
                 "name": "Nguyễn Thị Yến",
@@ -876,7 +1091,7 @@ export const data = {
                 "sex": "f"
             },
             {
-                "x": 1200,
+                "x": 1225,
                 "id": "nvt2",
                 "level": 5,
                 "name": "Nguyễn Thị Nhuần",
@@ -884,7 +1099,7 @@ export const data = {
                 "sex": "f"
             },
             {
-                "x": 1225,
+                "x": 1250,
                 "id": "nvt3",
                 "level": 5,
                 "name": "Nguyễn Văn Triển",
@@ -898,7 +1113,7 @@ export const data = {
                 ]
             },
             {
-                "x": 1250,
+                "x": 1275,
                 "id": "nvt33",
                 "level": 5,
                 "name": "Nguyễn Thị Mây",
