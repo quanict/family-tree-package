@@ -215,6 +215,7 @@ export default class Nodes {
 
         const xS = xScale(1) - xScale(0);
         const yS = yScale(1) - yScale(0);
+
         nodes.each((d: any) => {
             const d3selection = d3.select(`#node-${d.id}`);
             const tx = xScale(d.x);
@@ -223,6 +224,10 @@ export default class Nodes {
             d3selection.selectAll('.node-base, .partner-port, circle').attr('stroke-width', 2 / currentScale);
             // image section
             d3selection.selectAll('.node-image').attr('stroke-width', 1 / currentScale);
+            if( d.alive === true){
+                const test = d3selection.select('.node-base').classed("node-alive", true);
+                console.log(`==========xxxx`, {test});
+            }
         });
     }
 

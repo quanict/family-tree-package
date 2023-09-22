@@ -1,4 +1,5 @@
 import * as d3 from "d3";
+import $ from "jquery";
 import Nodes from "./Nodes";
 import Groups from "./Groups";
 import { isMulti } from "../util/selection-mode";
@@ -256,7 +257,7 @@ export default class Chart {
             let oldScale = Chart.currentScale;
             oldScale = 1
             const oldTranslate = zoom.translate();
-            console.log(`========== Chart.centerTo`, { oldScale, oldTranslate, newTranslate })
+            // console.log(`========== Chart.centerTo`, { oldScale, oldTranslate, newTranslate })
             svg.transition().duration(transitionDuration).tween('zoomToCenterNodes', function () {
                 var iScale = d3.interpolateNumber(oldScale, newScale);
                 var iTranslateX = d3.interpolateNumber(oldTranslate[0], newTranslate[0]);

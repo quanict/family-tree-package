@@ -65,7 +65,6 @@ export default class Link {
 			.attr('stroke-width', nodePortSize + 'px');
 
 		// if( linksToAdd.length > 0 && linksToAdd[0].update.length > 2){
-			console.log(`=========`, {newLinks})
 		// 	newLinks.append('circle')
 		// 	.style('stroke-width', 2)
 		// 	.attr('class', 'children-port')

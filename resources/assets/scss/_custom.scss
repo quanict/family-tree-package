@@ -4,109 +4,138 @@
   padding-left: 0px;
   background-color: #555;
 }
+
 svg {
   fill: #555;
 }
+
 .zoom-pan-area {
   fill: transparent;
 }
+
 #clone-svg-viewport .zoom-pan-area {
   fill: #555;
 }
-.node .node-base {
-  fill-opacity: 0.9;
-  fill: #bdbdbd;
-  stroke: #fff;
+
+.node {
+  .node-base {
+    fill-opacity: 0.9;
+    fill: #bdbdbd;
+    stroke: hsl(210,8%,45%);
+    &.node-alive {
+      stroke: hsl(206,85%,57.5%);
+    }
+  }
 }
+
 .bg-node-image {
   stroke: #080808;
   fill: #555;
 }
+
 .neutral-color {
   stop-color: #bdbdbd;
   stop-opacity: 0.9;
 }
+
 .male-color {
   stop-color: #a3b9cf;
   stop-opacity: 0.9;
 }
+
 .female-color {
   stop-color: #cfa3b3;
   stop-opacity: 0.9;
 }
+
 .node.male .node-base {
   fill: url(#male-gradient);
 }
+
 .node.female .node-base {
   fill: url(#female-gradient);
 }
+
 .parent-port,
 polygon.partner-port,
 .children-port {
   fill: #555;
   stroke: #fff;
 }
-.hidden-port{
+
+.hidden-port {
   fill: transparent;
   stroke: none;
 }
+
 text {
   text-decoration: none;
   text-anchor: middle;
   font-size: 12px;
   font-weight: 600;
   fill: #333333;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 text.name,
 text.surname {
   font-size: 14px;
 }
+
 .description text {
   text-decoration: none;
   text-anchor: middle;
   font-size: 14px;
   font-weight: 600;
 }
+
 .visible-link {
   fill: none;
   stroke: #fff;
 }
+
 .hidden-link {
   fill: none;
   stroke: transparent;
   stroke-width: 8px;
 }
+
 .group .group-area {
   fill: none;
   stroke-width: 2px;
 }
+
 .group .pointer {
   stroke-width: 2px;
 }
-.group rect.textarea{
+
+.group rect.textarea {
   fill: transparent;
   fill-opacity: 0.8;
   stroke: none;
   stroke-width: 3px;
 }
-.group .textarea text{
+
+.group .textarea text {
   font-family: Verdana, sans-serif;
   text-anchor: start;
   color: #333333;
 }
+
 .selected .node-base,
 .selected circle:not(.hidden-port),
 .selected polygon.partner-port,
 .selected .visible-link,
-.selected .group-textarea .background{
+.selected .group-textarea .background {
   stroke: #4cb3f4;
 }
-.open-context-menu rect{
+
+.open-context-menu rect {
   stroke-width: 0px;
   fill: transparent;
 }
-.open-context-menu circle{
+
+.open-context-menu circle {
   stroke-width: 0px;
   fill: #333;
 }
