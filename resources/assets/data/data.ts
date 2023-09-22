@@ -297,7 +297,11 @@ export const data = {
                 ]
             },
             {
+<<<<<<< HEAD
                 "x": 937.5,
+=======
+                "x": 925,
+>>>>>>> 508c34ed68a610936eeac4a8c3eb2d2163553342
                 "id": "300e247c-5b0c-bdb8-ceef-aec5d636ac9b",
                 "level": 2,
                 "name": "Nguyễn Văn Kha",
