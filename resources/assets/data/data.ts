@@ -241,7 +241,7 @@ export const data = {
                 "name": "Nguyễn Hai Thế",
             },
             {
-                "x": 550,
+                "x": 925,
                 "id": "1-2-1-5",
                 "level": 0,
                 "name": "Nguyễn Sử Thì",
@@ -256,7 +256,7 @@ export const data = {
 
             },
             {
-                "x": 550,
+                "x": 562.5,
                 "id": "1-2-1-5-4",
                 "level": 1,
                 "name": "Nguyễn Đội Thưởng",
@@ -270,7 +270,7 @@ export const data = {
             },
 
             {
-                "x": 925,
+                "x": 1350,
                 "id": "1-2-1-5-2",
                 "level": 1,
                 "name": "Nguyễn Tri Ka",
@@ -284,7 +284,7 @@ export const data = {
                 ]
             },
             {
-                "x": 950,
+                "x": 1375,
                 "id": "1-2-1-5-3",
                 "level": 1,
                 "name": "Phạm Thị Lý",
@@ -297,7 +297,7 @@ export const data = {
                 ]
             },
             {
-                "x": 937.5,
+                "x": 1362.5,
                 "id": "300e247c-5b0c-bdb8-ceef-aec5d636ac9b",
                 "level": 2,
                 "name": "Nguyễn Văn Kha",
@@ -310,14 +310,14 @@ export const data = {
                 ]
             },
             {
-                "x": 925,
+                "x": 1350,
                 "id": "17bf3117-38c5-06d0-7abb-a018f69e11a4",
                 "level": 3,
                 "name": "Nguyễn Văn Khả",
                 "death": "",
             },
             {
-                "x": 950,
+                "x": 1375,
                 "id": "ea28bcb8-185b-8cff-d8e9-2d446d1cb785",
                 "level": 3,
                 "name": "Nguyễn Văn Kỳ",
@@ -326,7 +326,7 @@ export const data = {
 
 
             {
-                "x": 975,
+                "x": 1400,
                 "id": "1-2-1-5-5",
                 "level": 1,
                 "name": "Nguyễn Thị Tám",
@@ -334,7 +334,7 @@ export const data = {
                 "sex": "f",
             },
             {
-                "x": 1000,
+                "x": 1425,
                 "id": "1-2-1-5-6",
                 "level": 1,
                 "name": "cụ Uyển",
@@ -344,7 +344,7 @@ export const data = {
 
 
             {
-                "x": 1025,
+                "x": 1450,
                 "id": "1-2-1-5-1",
                 "level": 1,
                 "name": "Nguyễn Xuân Cách",
@@ -414,7 +414,7 @@ export const data = {
                 "note": "3 con gai"
             },
             {
-                "x": 750,
+                "x": 1000,
                 "id": "1-2-1-5-4-3",
                 "name": "Nguyễn Văn Tước",
                 "level": 2,
@@ -430,7 +430,7 @@ export const data = {
             },
 
             {
-                "x": 800,
+                "x": 1050,
                 "id": "1-2-1-5-4-33",
                 "level": 2,
                 "name": "Dương Thị Hỉ",
@@ -446,14 +446,14 @@ export const data = {
             },
 
             {
-                "x": 725,
+                "x": 950,
                 "id": "1-2-1-5-4-3-1",
                 "level": 3,
                 "name": "Nguyễn Văn Đáp ",
                 "death": "",
             },
             {
-                "x": 750,
+                "x": 975,
                 "id": "1-2-1-5-4-3-2",
                 "level": 3,
                 "name": "Nguyễn Văn Sướng",
@@ -473,7 +473,7 @@ export const data = {
                 ]
             },
             {
-                "x": 775,
+                "x": 1275,
                 "id": "1-2-1-5-4-3-3",
                 "level": 3,
                 "name": "Nguyễn Văn Tích",
@@ -481,7 +481,7 @@ export const data = {
 
             },
             {
-                "x": 800,
+                "x": 1300,
                 "id": "1-2-1-5-4-3-4",
                 "level": 3,
                 "name": "Hà Thị Chỉ",
@@ -490,14 +490,14 @@ export const data = {
 
             },
             {
-                "x": 825,
+                "x": 1325,
                 "id": "1-2-1-5-4-3-5",
                 "level": 3,
                 "name": "Nguyễn Văn Rạng",
                 "death": "",
             },
             {
-                "x": 637.5,
+                "x": 700,
                 "id": "68803e12-8790-c2d9-1dd1-68e1511ca694",
                 "level": 4,
                 "name": "Nguyễn Văn Quý",
@@ -523,11 +523,18 @@ export const data = {
                 "death": "",
             },
             {
-                "x": 625,
+                "x": 650,
                 "id": "c2677975-a554-909a-241f-cbb3f92f88f7",
                 "level": 5,
                 "name": "Nguyễn Tiến Dũng",
                 "alive": true,
+                "relationships": [
+                    {
+
+                        "direction": "to",
+                        "children": ["ntd1", "ntd2", "ntd3"]
+                    }
+                ]
             },
             {
                 "x": 625,
@@ -544,7 +551,7 @@ export const data = {
                 "alive": true,
             },
             {
-                "x": 650,
+                "x": 675,
                 "id": "ntd3",
                 "level": 6,
                 "name": "Machec",
@@ -552,43 +559,118 @@ export const data = {
             },
 
             {
-                "x": 650,
+                "x": 762.5,
                 "id": "c10ee252-9e7f-81f5-0775-8f4ec9a0b848",
                 "level": 5,
                 "name": "Nguyễn Xuân Toàn",
                 "death": "",
+                "relationships": [
+                    {
+
+                        "direction": "to",
+                        "children": ["xnt1", "xnt2", "xnt3"]
+                    }
+                ]
             },
             {
-                "x": 650,
+                "x": 700,
                 "id": "xnt1",
                 "level": 6,
                 "name": "Nguyễn Hồng Quân",
                 "alive": true,
+                "relationships": [
+                    {
+                        "partnerId": "xnt11",
+                        "direction": "to",
+                        "children": ["nhq1"]
+                    }
+                ]
             },
             {
-                "x": 650,
+                "x": 725,
+                "id": "xnt11",
+                "level": 6,
+                "name": "Khiếu Thị Ngoan",
+                "sex": "f",
+                "alive": true,
+            },
+            {
+                "x": 700,
+                "id": "nhq1",
+                "level": 7,
+                "name": "Nguyễn Khiếu \n Nhật Minh",
+                "alive": true,
+            },
+            {
+                "x": 750,
                 "id": "xnt2",
                 "level": 6,
                 "name": "Nguyễn Mạnh Chiên",
                 "alive": true,
+                "relationships": [
+                    {
+                        "partnerId": "xnt22",
+                        "direction": "to",
+                        "children": ["nmc1", "nmc2"]
+                    }
+                ]
             },
             {
-                "x": 650,
-                "id": "xnt2",
+                "x": 775,
+                "id": "xnt22",
                 "level": 6,
-                "name": "Nguyễn Thị Lan Anh",
+                "name": "Nguyễn Thị Thủy",
+                "sex": "f",
                 "alive": true,
             },
             {
-                "x": 675,
+                "x": 750,
+                "id": "nmc1",
+                "level": 7,
+                "name": "Nguyễn Thị Thảo",
+                "sex": "f",
+                "alive": true,
+            },
+            {
+                "x": 775,
+                "id": "nmc2",
+                "level": 7,
+                "name": "",
+                "alive": true,
+            },
+            {
+                "x": 800,
+                "id": "xnt3",
+                "level": 6,
+                "name": "Nguyễn Thị Lan Anh",
+                "sex": "f",
+                "alive": true,
+                "relationships": [
+                    {
+                        "partnerId": "xnt33",
+                        "direction": "to",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "x": 825,
+                "id": "xnt33",
+                "level": 6,
+                "name": "Nguyễn Đình Nhiệm",
+                "alive": true,
+            },
+            {
+                "x": 850,
                 "id": "6d389160-1bc8-b1e1-f474-68b57f995b4a",
                 "level": 5,
                 "name": "Nguyễn Thị Oanh",
+                "sex": "f",
                 "alive": true,
             },
 
             {
-                "x": 750,
+                "x": 925,
                 "id": "f31a349c-4ddd-8ec2-930e-a1b08a18f00d",
                 "level": 4,
                 "name": "Nguyễn Văn Quán",
@@ -608,42 +690,42 @@ export const data = {
                 ]
             },
             {
-                "x": 700,
+                "x": 875,
                 "id": "6af78c07-a61b-3e70-51e3-796508b6c0bd",
                 "level": 5,
                 "name": "Nguyễn Văn Tươi",
                 "death": "",
             },
             {
-                "x": 725,
+                "x": 900,
                 "id": "ce17e22d-aef5-db58-cf56-6edc4a3ed115",
                 "level": 5,
                 "name": "Nguyễn Văn Hoan",
                 "death": "",
             },
             {
-                "x": 750,
+                "x": 925,
                 "id": "abfdc0bd-4bb3-b93c-fed0-6f85f92b2de0",
                 "level": 5,
                 "name": "Nguyễn Văn Quang",
                 "death": "",
             },
             {
-                "x": 775,
+                "x": 950,
                 "id": "0d79b869-e654-cec5-1b04-c023ab2eeedc",
                 "level": 5,
                 "name": "Nguyễn Văn Phung",
                 "death": "",
             },
             {
-                "x": 800,
+                "x": 975,
                 "id": "cb97b3ab-1652-02e4-df7d-d4bde749ede6",
                 "level": 5,
                 "name": "Nguyễn Văn Toán",
                 "death": "",
             },
             {
-                "x": 837.5,
+                "x": 1037.5,
                 "id": "20ab63f2-8220-96a7-4fa5-28baeaf7cb9b",
                 "level": 4,
                 "name": "Nguyễn Văn Quản",
@@ -653,35 +735,126 @@ export const data = {
 
                         "direction": "to",
                         "children": [
-                            "cca31f29-6be3-3bf2-5487-03ff3724942a",
-                            "d1c4a50a-ea03-22db-7aa7-74a25da6c3fa"
+                            "nvq1",
+                            "nvq2"
                         ]
                     }
                 ]
             },
             {
-                "x": 825,
-                "id": "cca31f29-6be3-3bf2-5487-03ff3724942a",
+                "x": 1000,
+                "id": "nvq1",
                 "level": 5,
                 "name": "Nguyễn Văn Thiệp",
                 "alive": true,
+                "relationships": [
+                    {
+                        "partnerId": "nvq11",
+                        "direction": "to",
+                        "children": ["nvth1", "nvth2"]
+                    }
+                ]
             },
             {
-                "x": 850,
-                "id": "d1c4a50a-ea03-22db-7aa7-74a25da6c3fa",
+                "x": 1025,
+                "id": "nvq11",
                 "level": 5,
-                "name": "Nguyễn Văn Hữu",
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1000,
+                "id": "nvth1",
+                "level": 6,
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1025,
+                "id": "nvth2",
+                "level": 6,
+                "name": "",
                 "alive": true,
             },
             {
-                "x": 875,
+                "x": 1050,
+                "id": "nvq2",
+                "level": 5,
+                "name": "Nguyễn Văn Hữu",
+                "alive": true,
+                "relationships": [
+                    {
+                        "partnerId": "nvq22",
+                        "direction": "to",
+                        "children": ["nvh1", "nvh2"]
+                    }
+                ]
+            },
+            {
+                "x": 1075,
+                "id": "nvq22",
+                "level": 5,
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1050,
+                "id": "nvh1",
+                "level": 6,
+                "name": "",
+                "alive": true,
+            },
+            {
+                "x": 1075,
+                "id": "nvh2",
+                "level": 6,
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1125,
                 "id": "4f01dac4-f3fd-240f-2573-286e64877556",
                 "level": 4,
                 "name": "Nguyễn Văn Thiệu",
                 "death": "",
+                "relationships": [
+                    {
+
+                        "direction": "to",
+                        "children": ["nvte1", "nvte2", "nvte3"]
+                    }
+                ]
             },
             {
-                "x": 900,
+                "x": 1100,
+                "id": "nvte1",
+                "level": 5,
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1125,
+                "id": "nvte2",
+                "level": 5,
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1150,
+                "id": "nvte3",
+                "level": 5,
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1212.5,
                 "id": "ab76f465-7f04-db57-cfb7-84370c872306",
                 "level": 4,
                 "name": "Nguyễn Văn Thuật",
@@ -690,15 +863,69 @@ export const data = {
                     {
 
                         "direction": "to",
-                        "children": ["8caf8e1d-3ff3-eb6b-5bec-a246ff6e8618"]
+                        "children": ["nvt1", "nvt2", "nvt3"]
                     }
                 ]
             },
             {
-                "x": 900,
-                "id": "8caf8e1d-3ff3-eb6b-5bec-a246ff6e8618",
+                "x": 1175,
+                "id": "nvt1",
+                "level": 5,
+                "name": "Nguyễn Thị Yến",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1200,
+                "id": "nvt2",
+                "level": 5,
+                "name": "Nguyễn Thị Nhuần",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1225,
+                "id": "nvt3",
                 "level": 5,
                 "name": "Nguyễn Văn Triển",
+                "alive": true,
+                "relationships": [
+                    {
+                        "partnerId": "nvt33",
+                        "direction": "to",
+                        "children": ["nvtr1", "nvtr2", "nvtr3"]
+                    }
+                ]
+            },
+            {
+                "x": 1250,
+                "id": "nvt33",
+                "level": 5,
+                "name": "Nguyễn Thị Mây",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1212.5,
+                "id": "nvtr1",
+                "level": 6,
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1237.5,
+                "id": "nvtr2",
+                "level": 6,
+                "name": "",
+                "alive": true,
+                "sex": "f"
+            },
+            {
+                "x": 1262.5,
+                "id": "nvtr3",
+                "level": 6,
+                "name": "",
                 "alive": true,
             },
 
