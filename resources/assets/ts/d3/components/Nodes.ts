@@ -13,10 +13,6 @@ import * as d3 from "d3";
 export default class Nodes {
     static items: any
 
-    constructor() {
-
-    }
-
     static getNodeById(id: string, dataset: any = false) {
         let items: any = dataset || Nodes.items;
         items = items.filter((item: any) => { return item.id == id });
@@ -224,9 +220,8 @@ export default class Nodes {
             d3selection.selectAll('.node-base, .partner-port, circle').attr('stroke-width', 2 / currentScale);
             // image section
             d3selection.selectAll('.node-image').attr('stroke-width', 1 / currentScale);
-            if( d.alive === true){
-                const test = d3selection.select('.node-base').classed("node-alive", true);
-                console.log(`==========xxxx`, {test});
+            if (d.alive === true) {
+                d3selection.select('.node-base').classed("node-alive", true);
             }
         });
     }
