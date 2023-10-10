@@ -1,0 +1,7 @@
+id,hidden
+name
+surname
+sex
+death_at, date, Death
+alive
+parent

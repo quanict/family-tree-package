@@ -527,6 +527,49 @@ nav#selection-in-touch-device .navbar-right {
   nav#selection-in-touch-device .navbar-right {
     float: right; } }
 
+.nested-padding-0 {
+  padding-left: 0px; }
+
+.nested-padding-1 {
+  padding-left: 25px;
+  color: #4493a5; }
+
+.nested-padding-2 {
+  padding-left: 50px;
+  color: #429056; }
+
+.nested-padding-3 {
+  padding-left: 75px;
+  color: #a9a854; }
+
+.nested-padding-4 {
+  padding-left: 100px;
+  color: #a34a40; }
+
+.nested-padding-5 {
+  padding-left: 125px;
+  color: #7f55a5; }
+
+.nested-padding-6 {
+  padding-left: 150px;
+  color: #4f76a2; }
+
+.nested-padding-7 {
+  padding-left: 175px;
+  color: #4493a5; }
+
+.nested-padding-8 {
+  padding-left: 200px;
+  color: #429056; }
+
+.nested-padding-9 {
+  padding-left: 225px;
+  color: #a9a854; }
+
+.nested-padding-10 {
+  padding-left: 250px;
+  color: #a34a40; }
+
 /*!
    * Bootstrap  v5.3.1 (https://getbootstrap.com/)
    * Copyright 2011-2023 The Bootstrap Authors
@@ -10340,3 +10383,46 @@ text.surname {
 .open-context-menu circle {
   stroke-width: 0px;
   fill: #333; }
+
+.nested-padding-0 {
+  padding-left: 0px; }
+
+.nested-padding-1 {
+  padding-left: 25px;
+  color: #4493a5; }
+
+.nested-padding-2 {
+  padding-left: 50px;
+  color: #429056; }
+
+.nested-padding-3 {
+  padding-left: 75px;
+  color: #a9a854; }
+
+.nested-padding-4 {
+  padding-left: 100px;
+  color: #a34a40; }
+
+.nested-padding-5 {
+  padding-left: 125px;
+  color: #7f55a5; }
+
+.nested-padding-6 {
+  padding-left: 150px;
+  color: #4f76a2; }
+
+.nested-padding-7 {
+  padding-left: 175px;
+  color: #4493a5; }
+
+.nested-padding-8 {
+  padding-left: 200px;
+  color: #429056; }
+
+.nested-padding-9 {
+  padding-left: 225px;
+  color: #a9a854; }
+
+.nested-padding-10 {
+  padding-left: 250px;
+  color: #a34a40; }

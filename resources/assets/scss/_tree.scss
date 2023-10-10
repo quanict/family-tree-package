@@ -1,0 +1,18 @@
+
+$nested-space : 25;
+$tree-colors : (
+        #4493a5, #429056, #a9a854, #a34a40, #7f55a5, #4f76a2,
+        #4493a5, #429056, #a9a854, #a34a40, #7f55a5, #4f76a2
+);
+@for $i from 0 through 10 {
+  .nested-padding-#{$i} {
+    padding-left: #{$nested-space * $i}px;
+    @if $i == 0 {
+
+    }
+    @else {
+      color: nth($tree-colors, $i);
+    }
+
+  }
+}

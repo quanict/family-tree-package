@@ -24,6 +24,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->registerViews();
         $this->registerConfig();
         $this->app->register(RouteProvider::class);
+        $this->registerViews();
     }
 
 }

@@ -25,10 +25,18 @@ class RouteProvider extends RouteServiceProvider
 
         $registrar->namespace($this->namespace);
 
+        $sitePrefix = "";
         if( config('app.env') =="local" ){
-            $registrar->prefix('family-tree');
+            $sitePrefix = "family-tree";
+
         }
 
+        $registrar->prefix($sitePrefix);
         $registrar->group("$path/web.php");
+
+        $web = clone $registrar;
+        $web->prefix("{$sitePrefix}/admin");
+        $web->namespace("IctFamilyTree\Controllers\Admin");
+        $web->group($this->route_path.'/admin.php');
     }
 }
