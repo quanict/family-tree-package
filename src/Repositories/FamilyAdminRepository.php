@@ -9,7 +9,7 @@ use IctFamilyTree\Models;
 
 class FamilyAdminRepository extends BaseRepository
 {
-    private array $models = [
+    protected array $models = [
         'human'=> Models\Human::class
     ];
     public function __construct($model = '')
