@@ -1,9 +1,9 @@
 <?php
 
 namespace IctFamilyTree\Controllers\Admin;
-use ICT\Core\Controllers\BackendController;
-use ICT\Core\Exceptions\AutoLoadInstanceException;
-use ICT\Core\Facades\AutoLoad\Route;
+use QuhCore\Controllers\BackendController;
+use QuhCore\Exceptions\AutoLoadInstanceException;
+use QuhCore\Facades\AutoLoad\Route;
 use IctFamilyTree\Services\FamilyAdminService;
 
 class _AdminController extends BackendController

@@ -2,7 +2,7 @@
 
 namespace IctFamilyTree;
 
-use ICT\Core\Support\Provider\ServiceProviderConcern;
+use QuhCore\Support\Provider\ServiceProviderConcern;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

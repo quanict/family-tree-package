@@ -1,5 +1,5 @@
 <?php
-use ICT\Core\Facades\ICTRoute;
+use QuhCore\Facades\ICTRoute;
 use Illuminate\Support\Facades\Route;
 
 $naming = "faTreeAdmin";

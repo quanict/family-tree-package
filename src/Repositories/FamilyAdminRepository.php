@@ -3,8 +3,8 @@
 
 namespace IctFamilyTree\Repositories;
 
-use ICT\Core\Repositories\BaseRepository;
-use ICT\Core\Facades\AutoLoad\Route;
+use QuhCore\Repositories\BaseRepository;
+use QuhCore\Facades\AutoLoad\Route;
 use IctFamilyTree\Models;
 
 class FamilyAdminRepository extends BaseRepository

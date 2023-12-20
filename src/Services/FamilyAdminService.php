@@ -2,10 +2,10 @@
 
 namespace IctFamilyTree\Services;
 
-use ICT\Core\Exceptions\AutoLoadInstanceException;
-use ICT\Core\Facades\AutoLoad\Route;
-use ICT\Core\Services\BackendService;
-use ICT\Core\Services\Traits\DatatableColumnMethods;
+use QuhCore\Exceptions\AutoLoadInstanceException;
+use QuhCore\Facades\AutoLoad\Route;
+use QuhCore\Services\BackendService;
+use QuhCore\Services\Traits\DatatableColumnMethods;
 use ICT\DataTables\DataTables;
 use IctFamilyTree\Models\Human;
 use IctFamilyTree\Repositories\FamilyAdminRepository;

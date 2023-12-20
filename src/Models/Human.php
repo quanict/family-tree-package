@@ -2,7 +2,7 @@
 
 namespace IctFamilyTree\Models;
 
-use ICT\Core\Support\Nestedset\NodeTrait;
+use QuhCore\Support\Nestedset\NodeTrait;
 
 class Human extends _FamilyModel
 {
