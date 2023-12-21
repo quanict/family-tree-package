@@ -3,14 +3,14 @@
 namespace IctFamilyTree\Services\Hooks;
 
 use Illuminate\Support\Facades\Route;
-use ICT\WebPage\Facades\Meta;
+use QuhWebPage\Facades\Meta;
 
 class HumanBackendForm
 {
     public function dispatch()
     {
         /**
-         * @var \Ict\Input\Services\BackendForm $form;
+         * @var \QuhInput\Services\BackendForm $form;
 
          */
         $humanService = Route::current()->getController()->humanService;

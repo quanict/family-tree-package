@@ -3,7 +3,7 @@
 namespace IctFamilyTree\Controllers\Admin;
 
 use IctFamilyTree\Services;
-use ICT\WebPage\Facades\Meta;
+use QuhWebPage\Facades\Meta;
 
 class HumanController extends _AdminController
 {
